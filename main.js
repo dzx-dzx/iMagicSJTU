@@ -1,9 +1,20 @@
+// ==UserScript==
+// @name         SJTU-Course Selection Wizard
+// @namespace    http://tampermonkey.net/
+// @version      0.4.0
+// @description  添加一个打开选课社区(course.sjtu.plus)的按钮
+// @author       Me
+// @match        https://i.sjtu.edu.cn/xsxk/zzxkyzb_cxZzxkYzbIndex.html*
+// @homepageURL https://github.com/dzx-dzx/iMagicSJTU
+// @license Apache
+// ==/UserScript==
+
 /**
  * WELCOME TO SJTU of Witchcraft and Wizardry
  * Version: v0.0.3-alpha
  */
-
-var config = {
+(async function (){
+    var config = {
     // list all classes
     "listAll": true,
     // trigger auto select
@@ -224,3 +235,5 @@ async function getClass(classId) {
     } else
         return -1;
 }
+
+})
